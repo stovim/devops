@@ -1,0 +1,7 @@
+FROM centos: latest 
+MAINTAINER Shlomo tovim <stovim@comverse.com>
+run yum –y install java-1.8.0-openjdk-devel.x86_64
+run yum –y install tomcat
+mkdir /logs
+ENV NAME stovim
+run wget http://52.28.236.118:8081/artifactory/libs-snapshot-local/org/springframework/samples/spring-petclinic-stovim/1.0.0-SNAPSHOT/spring-petclinic-stovim-1.0.0-20160207.112411-1.war 
